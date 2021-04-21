@@ -144,7 +144,7 @@ public class ScrabbleService {
                 .collect(Collectors.toList());
 
         do {
-            final int randomIndex = random.nextInt(tiles.size() + 1);
+            final int randomIndex = random.nextInt(tiles.size());
             final String tile = tiles.get(randomIndex);
             response.getTiles().add(tile);
             tiles.remove(randomIndex);

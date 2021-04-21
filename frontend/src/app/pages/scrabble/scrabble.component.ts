@@ -25,9 +25,8 @@ export class ScrabbleComponent implements OnInit {
   getNewRecommendedWords(tiles: string) {
     this.dataService.scrabble.wordRecommendation(tiles)
       .subscribe(
-      (response: any) => {
-        console.log(response);
-        this.recommendedWords = response.words;
+      (response: {words: Word[]}) => {
+        this.recommendedWords = response.words.sort((a, b) => a.score < b.score ? 1 : -1);
     });
   }
 

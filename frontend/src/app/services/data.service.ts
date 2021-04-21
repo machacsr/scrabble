@@ -30,7 +30,7 @@ export class DataService {
   ) { }
 
   scrabble = {
-    wordRecommendation: (parameter: string): Observable<string> => {
+    wordRecommendation: (parameter: string): Observable<any> => {
       return this.apiService.get('/api/scrabble/word-recommendation/' + parameter);
     },
     move: (body: MoveRequest): Observable<Word[]> => {
