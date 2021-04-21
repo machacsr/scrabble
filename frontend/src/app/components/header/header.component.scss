@@ -1,0 +1,39 @@
+.header-container {
+    height: 300px;
+    
+    position: relative;
+}
+
+.scrabble-logo {
+    max-height: 350px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.setttings {
+    display: flex;
+
+    button {
+        margin: 5px;
+        color: white;
+        height: 40px;
+        background-color: blue;
+    }
+}
+
+
+.tiles {
+    margin: 5px;
+
+    textarea {
+        height: 200px;
+        width: 500px;
+        font-size: 18px;
+        resize: none;
+    }
+}
+
+.container {
+    display: flex;
+}

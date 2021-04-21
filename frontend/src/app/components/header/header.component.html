@@ -1,0 +1,36 @@
+<div class="header-container">
+    <img class="scrabble-logo" src="/assets/scrabble-logo.png" alt="scrabble">
+
+    <div class="setttings">
+        <button (click)="newGame()">
+            Új játék
+        </button>
+        <button (click)="getNewTiles()">
+            Új betűkészlet
+        </button>
+        <button (click)="newRecommendedWordButton()">
+            Szó ajánlás
+        </button>
+    </div>
+
+
+    <div class="container">
+        <div class="tiles">
+            <div class="message">
+                A betűkészlet legyen vesszővel elválasztva!
+            </div>
+            <textarea
+                [(ngModel)]="textAreaModel"
+            ></textarea>
+        </div>
+    
+        <div class="word-recommendation">
+            <h3>Ajánlott szavak</h3>
+            <div *ngFor="let word of recommendedWords">
+                <span style="font-weight: bold;">{{word.value}}</span>
+                - pontszáma: <span>{{word.score}}</span>
+            </div>
+        </div>
+    </div>
+
+</div>

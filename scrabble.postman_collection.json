@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "f41df565-e50b-4888-87be-9df4a963ac72",
+		"name": "scrabble",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "word-recommendation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/scrabble/word-recommendation/:tiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"scrabble",
+						"word-recommendation",
+						":tiles"
+					],
+					"variable": [
+						{
+							"key": "tiles",
+							"value": "h,u,z,a,l,c,s,í,p,t,e,t,ő"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "move",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"move\": {\n        \"rowIndex\": 1,\n        \"columnIndex\": \"E\"\n    },\n    \"character\": \"A\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/scrabble/move",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"scrabble",
+						"move"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-random-tiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/scrabble/pull",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"scrabble",
+						"pull"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

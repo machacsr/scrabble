@@ -1,0 +1,21 @@
+<div class="row" *ngFor="let row of table; let i = index">
+    <div class="left-column center-box large-cell bold">
+        index: {{i}}
+    </div>
+    <div *ngFor="let cell of table[i]; let colIdx = index;" class="center-box medium-cell">
+        <input
+            [disabled]="cell.locked"
+            maxlength="2"
+            class="cell"
+            [(ngModel)]="cell.value"
+            (blur)="processCharacter(cell, i, bottomRow[colIdx])">
+    </div>
+</div>
+
+<div class="row">
+    <div class="left-column center-box large-cell bold">
+    </div>
+    <div *ngFor="let cell of bottomRow" class="bottom-row medium-cell center-box">
+        {{cell}}
+    </div>
+</div>

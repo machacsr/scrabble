@@ -1,0 +1,23 @@
+allprojects {
+    group = 'com.loginet'
+    version = '1.0.0'
+}
+
+task copyClientResources(dependsOn: ':frontend:build') {
+    group = 'build'
+    description = 'Copy client resources into server'
+}
+copyClientResources.doFirst {
+    project.logger.lifecycle(project(':frontend').buildDir.absolutePath)
+    copy {
+        from project(':frontend').buildDir.absolutePath
+        into "${project(':server').buildDir}/resources/main/public"
+    }
+}
+
+
+task buildServerWithClient(dependsOn: ['copyClientResources', ':server:jar']) {
+    group = 'build'
+    description = 'Build combined server & client JAR'
+}
+

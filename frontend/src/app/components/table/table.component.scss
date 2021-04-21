@@ -1,0 +1,34 @@
+.row {
+    display: flex;
+    margin: 5px;
+}
+
+.medium-cell {
+    margin: 5px;
+    height: 65px;
+    width: 65px;
+}
+
+.cell {
+    background-color: beige;
+    border: 0;
+    text-align: center;
+    font-size: 18px;
+
+    height: 60px;
+    width: 60px;
+}
+
+.left-column {
+    width: 75px;
+    font-weight: bold;
+}
+.bottom-row {
+    font-weight: bold;
+}
+
+.center-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

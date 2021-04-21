@@ -1,0 +1,11 @@
+<app-header
+    (newRecommendedWordButtonClicked)="getNewRecommendedWords($event)"
+    (newGameButtonClicked)="recommendedWords = []; tableComponent.init()"
+    [recommendedWords]="recommendedWords">
+
+    <h1>Scrabble!</h1>
+</app-header>
+
+<app-table #table>
+    
+</app-table>
