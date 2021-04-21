@@ -1,6 +1,6 @@
 <div class="row" *ngFor="let row of table; let i = index">
     <div class="left-column center-box large-cell bold">
-        index: {{i}}
+        {{i}}
     </div>
     <div *ngFor="let cell of table[i]; let colIdx = index;" class="center-box medium-cell">
         <input
